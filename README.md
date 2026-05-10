@@ -1,16 +1,31 @@
-# tsar_id_edition
+# 👑 Царь ID
 
-A new Flutter project.
+Модуль единой аутентификации для экосистемы «Царь». Один аккаунт для всех сервисов: Царь-подписки, Царь-щит, Царь-аптечка и других.
 
-## Getting Started
+## 🚀 Возможности
 
-This project is a starting point for a Flutter application.
+- Единый вход (SSO) через логин/пароль
+- Поддержка passkeys и биометрии (отпечаток, Face ID)
+- Защита от взлома: автоматическая блокировка при подозрительной активности
+- Гибкая интеграция с другими модулями через API
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Стек
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Фронт:** React
+- **Бэк:** Python + FastAPI
+- **База данных:** PostgreSQL (планируется)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Уже готово
+
+✅ Регистрация и авторизация  
+✅ Базовый сборщик логов  
+✅ Прототип биометрической проверки
+
+## 🔄 В планах
+
+- Полная интеграция с Царь-щит и Царь-подписками
+- Обучение ИИ на логах безопасности
+
+## 📄 Лицензия
+
+MIT
