@@ -1,0 +1,33 @@
+buildscript {
+    ext.kotlin_version = '2.1.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+subprojects { subproject ->
+    // Плагины вроде sqflite_sqlcipher читают flutter.compileSdkVersion; не трогаем :app — там свой ext.flutter от Flutter.
+    if (subproject.name != 'app') {
+        subproject.ext.flutter = [
+            compileSdkVersion: 36,
+        ]
+    }
+    subproject.buildDir = "${rootProject.buildDir}/${subproject.name}"
+    subproject.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
