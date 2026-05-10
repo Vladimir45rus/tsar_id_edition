@@ -23,7 +23,6 @@ dependencies:
   path: ^1.9.0
   vibration: ^2.0.1
   flutter_ringtone_player: ^4.0.0+4
-  # camera: ^0.11.0+2
   permission_handler: ^11.3.1
   flutter_secure_storage: ^9.2.2
   shared_preferences: ^2.3.2
